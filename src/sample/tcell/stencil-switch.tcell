@@ -84,7 +84,7 @@
   (= fp (fopen "u2.data" "w"))
   (for ((= j 0) (< j NY) (inc j))
     (for ((= i 0) (< i NX) (inc i))
-      (csym::fprintf fp " %.15E %.15E %.15E~%" (cast double (/ i NX)) (cast double (/ j NY)) (aref a j i))
+      (csym::fprintf fp " %.15E %.15E %.15E~%"  (/ (cast double i) NX) (/ (cast double j) NY) (aref a j i))
     )
     (csym::fprintf fp "~%")
   )
